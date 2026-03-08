@@ -2,8 +2,8 @@
 
 ## Contacts
 
--   **Discord:** - `@petrushevskiyMaksim`
--   **Telegram:** - `@PetrushevskiyMaxim`
+-   **Discord:** - ```@petrushevskiyMaksim```
+-   **Telegram:** - ```@PetrushevskiyMaxim```
 -   **Gmail:** - <6atbko89@gmail.com>
 
 ## About me
