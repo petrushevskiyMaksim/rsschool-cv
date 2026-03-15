@@ -51,13 +51,135 @@ body {
 
 /* Header burger ---------------- */
 .button-burger {
-    position: relative;
+    margin-left: auto;
+
     width: 34px;
     height: 34px;
-    margin-left: auto;
 }
 
-.icon-burger,
+.burger-menu {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.burger-middle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e3e3e3;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.burger-menu::before,
+.burger-menu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e3e3e3;
+    transition: all 0.3s ease-in-out;
+}
+
+.burger-menu::before {
+    top: 25%;
+}
+
+.burger-menu::after {
+    bottom: 25%;
+}
+
+.button-burger:hover .burger-middle,
+.button-burger:hover .burger-menu::before,
+.button-burger:hover .burger-menu::after {
+    background-color: #8774e1;
+}
+
+.button-burger.open .burger-middle {
+    opacity: 0;
+}
+
+.button-burger.open .burger-menu::before {
+    transform: rotate(45deg);
+    top: 45%;
+}
+
+.button-burger.open .burger-menu::after {
+    transform: rotate(-45deg);
+    bottom: 50%;
+}
+
+/* .burger-menu {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    height: 2px;
+    width: 100%;
+
+    background-color: #e3e3e3;
+
+    transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+}
+
+.burger-menu::before,
+.burger-menu::after {
+    content: '';
+    position: absolute;
+
+    height: 2px;
+    width: 100%;
+
+    background-color: #e3e3e3;
+
+    transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+}
+
+.burger-menu::before {
+    top: 10px;
+    left: 0;
+}
+
+.burger-menu::after {
+    bottom: 10px;
+    left: 0;
+}
+
+.button-burger:hover .burger-menu,
+.button-burger:hover .burger-menu::after,
+.button-burger:hover .burger-menu::before {
+    background-color: #8774e1;
+}
+
+.button-burger.open span {
+    opacity: 0;
+}
+
+
+.button-burger.open .burger-menu::before {
+    transform: rotate(45deg);
+    top: 0; 
+}
+
+.button-burger.open .burger-menu::after {
+    transform: rotate(-45deg);
+    bottom: 0; 
+} */
+
+/* .icon-burger,
 .icon-close {
     position: absolute;
     top: 0;
@@ -66,18 +188,22 @@ body {
     width: 100%;
     height: 100%;
 
+    font-size: 7px;
+
     fill: #e3e3e3;
-    transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
-    -webkit-transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
-    -moz-transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
-    -ms-transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
-    -o-transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+    color: #8774e1;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .icon-burger:hover,
 .icon-close:hover {
+    color: #8774e1;
     fill: #8774e1;
-}
+} */
 
 .icon-close {
     transform: translateX(200%);

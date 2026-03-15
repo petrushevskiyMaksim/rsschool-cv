@@ -3,6 +3,6 @@ const burgerIcon = document.querySelector('.icon-burger');
 const closeIcon = document.querySelector('.icon-close');
 
 burgerButton.addEventListener('click', function () {
-    burgerIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('visible');
+    this.classList.toggle('open');
+    console.log(this.classList); // проверь в консоли, появляется ли класс
 });
