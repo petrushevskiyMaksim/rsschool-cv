@@ -124,7 +124,7 @@ body.hidden {
 
 .button-burger.open-menu .burger-menu-icon::before {
     transform: rotate(45deg);
-    top: 45%;
+    top: 42%;
 }
 
 .button-burger.open-menu .burger-menu-icon::after {
@@ -244,13 +244,47 @@ body.hidden {
     transition-delay: 1.6s;
 }
 
-.nav-burger-link {
+.nav-burger-link,
+.nav-link {
+    position: relative;
     color: #ebe6e6;
     font-size: 24px;
 }
 
-.nav-burger-link:hover {
+.nav-burger-link:hover,
+.nav-link:hover {
     color: rgb(135, 116, 225, 1);
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+
+.nav-burger-link::after,
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    color: #8774e1;
+    background-color: #8774e1;
+    border-bottom: #8774e1;
+
+    transition: width 0.5s ease;
+    -webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -ms-transition: width 0.5s ease;
+    -o-transition: width 0.5s ease;
+}
+
+.nav-burger-link:hover::after,
+.nav-link:hover::after {
+    width: 100%;
 }
 
 /* Main ------------------------------------------------------------------------------------- */
