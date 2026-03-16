@@ -1,8 +1,13 @@
 const burgerButton = document.querySelector('.button-burger');
-const burgerIcon = document.querySelector('.icon-burger');
-const closeIcon = document.querySelector('.icon-close');
+const burgerMenu = document.querySelector('.menu-burger');
+
+const body = document.body;
 
 burgerButton.addEventListener('click', function () {
-    this.classList.toggle('open');
+    burgerButton.classList.toggle('open-menu');
+    burgerMenu.classList.toggle('open');
+    body.classList.toggle('hidden');
+
     console.log(this.classList); // проверь в консоли, появляется ли класс
+    console.log(headerNav.classList); // проверь в консоли, появляется ли класс
 });

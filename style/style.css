@@ -1,4 +1,4 @@
-/* Cors */
+/* Cors ----------------------------------------------------------------------------------*/
 html {
     scroll-behavior: smooth;
 }
@@ -10,6 +10,10 @@ body {
     font-style: normal;
     background-color: rgb(35, 35, 35);
     color: #ebe6e6;
+}
+
+body.hidden {
+    overflow: hidden;
 }
 
 .container {
@@ -34,22 +38,23 @@ body {
     height: 60px;
 }
 
-/* Header Nav --------------- */
+/* Header Nav -------------------------------------- */
 .nav {
     display: none;
-
-    margin-left: auto;
 }
 
 .nav-link {
     color: #ebe6e6;
+    font-size: 24px;
 }
 
 .nav-link:hover {
     color: rgb(135, 116, 225, 1);
 }
 
-/* Header burger ---------------- */
+/* Header burger ----------------------------------- */
+
+/* Burger icon -------------------------------------- */
 .button-burger {
     margin-left: auto;
 
@@ -57,61 +62,195 @@ body {
     height: 34px;
 }
 
-.burger-menu {
+.burger-menu-icon {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.burger-middle {
+.burger-middle-icon {
     position: absolute;
     top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
+    right: 0;
+
+    width: 66%;
+    height: 3px;
+
     background-color: #e3e3e3;
     transform: translateY(-50%);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+
     transition: all 0.3s ease-in-out;
 }
 
-.burger-menu::before,
-.burger-menu::after {
+.burger-menu-icon::before,
+.burger-menu-icon::after {
     content: '';
+
     position: absolute;
     left: 0;
+
     width: 100%;
-    height: 2px;
+    height: 3px;
+
+    border-radius: 20px;
     background-color: #e3e3e3;
+
     transition: all 0.3s ease-in-out;
 }
 
-.burger-menu::before {
-    top: 25%;
+.burger-menu-icon::before {
+    top: 15%;
 }
 
-.burger-menu::after {
-    bottom: 25%;
+.burger-menu-icon::after {
+    bottom: 15%;
 }
 
-.button-burger:hover .burger-middle,
-.button-burger:hover .burger-menu::before,
-.button-burger:hover .burger-menu::after {
+.button-burger:hover .burger-middle-icon,
+.button-burger:hover .burger-menu-icon::before,
+.button-burger:hover .burger-menu-icon::after {
     background-color: #8774e1;
 }
 
-.button-burger.open .burger-middle {
+.button-burger.open-menu .burger-middle-icon {
     opacity: 0;
 }
 
-.button-burger.open .burger-menu::before {
+.button-burger.open-menu .burger-menu-icon::before {
     transform: rotate(45deg);
     top: 45%;
 }
 
-.button-burger.open .burger-menu::after {
+.button-burger.open-menu .burger-menu-icon::after {
     transform: rotate(-45deg);
     bottom: 50%;
+}
+
+/* Burger menu --------------------------------------------*/
+.menu-burger {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    background-color: rgb(35, 35, 35);
+    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
+    transition: transform 0.8s ease-in-out, background-color 0.3s ease-in-out;
+    -webkit-transition: transform 0.8s ease-in-out,
+        background-color 0.3s ease-in-out;
+    -moz-transition: transform 0.8s ease-in-out,
+        background-color 0.3s ease-in-out;
+    -ms-transition: transform 0.8s ease-in-out,
+        background-color 0.3s ease-in-out;
+    -o-transition: transform 0.8s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.menu-burger.open {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+}
+
+.nav-burger-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    text-align: center;
+}
+
+.nav-burger-item {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1.2s ease;
+    -webkit-transition: opacity 1s ease, transform 1.2s ease;
+    -moz-transition: opacity 1s ease, transform 1.2s ease;
+    -ms-transition: opacity 1s ease, transform 1.2s ease;
+    -o-transition: opacity 1s ease, transform 1.2s ease;
+}
+
+/* Разные начальные позиции */
+
+.nav-burger-item:nth-child(even) {
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+}
+
+.nav-burger-item:nth-child(odd) {
+    transform: translateX(50px);
+    -webkit-transform: translateX(50px);
+    -moz-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    -o-transform: translateX(50px);
+}
+
+.nav-burger-item:first-child {
+    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+}
+
+.nav-burger-item:last-child {
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+}
+
+/* Состояние при открытом меню */
+.menu-burger.open .nav-burger-item {
+    opacity: 1;
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+}
+
+/* Задержки для каждого пункта */
+.menu-burger.open .nav-burger-item:nth-child(1) {
+    transition-delay: 0.8s;
+}
+.menu-burger.open .nav-burger-item:nth-child(2) {
+    transition-delay: 1s;
+}
+.menu-burger.open .nav-burger-item:nth-child(3) {
+    transition-delay: 1.2s;
+}
+.menu-burger.open .nav-burger-item:nth-child(4) {
+    transition-delay: 1.4s;
+}
+.menu-burger.open .nav-burger-item:nth-child(5) {
+    transition-delay: 1.6s;
+}
+
+.nav-burger-link {
+    color: #ebe6e6;
+    font-size: 24px;
+}
+
+.nav-burger-link:hover {
+    color: rgb(135, 116, 225, 1);
 }
 
 /* Main ------------------------------------------------------------------------------------- */
@@ -129,6 +268,15 @@ body {
 @media (min-width: 768px) {
     .nav {
         display: block;
+
+        margin-left: auto;
+
+        opacity: 1;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
     }
 
     .button-burger {
