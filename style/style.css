@@ -174,6 +174,7 @@ body.hidden {
     text-align: center;
 }
 
+/* Начально состояние пунктов меню*/
 .nav-burger-item {
     opacity: 0;
     transition: opacity 1s ease, transform 1.2s ease;
@@ -184,7 +185,6 @@ body.hidden {
 }
 
 /* Разные начальные позиции */
-
 .nav-burger-item:nth-child(even) {
     transform: translateX(-50px);
     -webkit-transform: translateX(-50px);
@@ -277,6 +277,10 @@ body.hidden {
         -moz-transform: translate(0);
         -ms-transform: translate(0);
         -o-transform: translate(0);
+    }
+
+    .menu-burger {
+        display: none;
     }
 
     .button-burger {
