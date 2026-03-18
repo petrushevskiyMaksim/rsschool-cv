@@ -38,6 +38,42 @@ body.hidden {
     height: 60px;
 }
 
+/* Header Logo -------------------------------------- */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-icon {
+    height: 100%;
+    width: auto;
+    max-width: none;
+}
+
+.logo svg {
+    color: #e3e3e3;
+
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+}
+
+.logo:hover svg {
+    color: rgb(135, 116, 225, 1);
+}
+
 /* Header Nav -------------------------------------- */
 .nav {
     display: none;
@@ -136,18 +172,26 @@ body.hidden {
 .menu-burger {
     position: fixed;
     top: 60px;
+    bottom: 0;
     left: 0;
     right: 0;
+
     display: flex;
     justify-content: center;
-    height: 100%;
+
+    height: calc(100% - 60px);
     padding: 20px;
+
+    overflow-y: auto;
+
     background-color: rgb(35, 35, 35);
+
     transform: translateX(150%);
     -webkit-transform: translateX(150%);
     -moz-transform: translateX(150%);
     -ms-transform: translateX(150%);
     -o-transform: translateX(150%);
+
     transition: transform 0.8s ease-in-out, background-color 0.3s ease-in-out;
     -webkit-transition: transform 0.8s ease-in-out,
         background-color 0.3s ease-in-out;
