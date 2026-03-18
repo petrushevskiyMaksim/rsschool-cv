@@ -17,6 +17,12 @@ body.hidden {
     overflow: hidden;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
