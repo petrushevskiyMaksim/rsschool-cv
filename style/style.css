@@ -5,6 +5,7 @@ html {
 
 body {
     font-family: Poppins, sans-serif;
+    font-size: 18px;
     font-weight: normal;
     line-height: 1.5;
     font-style: normal;
@@ -35,6 +36,8 @@ body.hidden {
 .header-content {
     display: flex;
     align-items: center;
+
+    padding: 8px 0;
     height: 60px;
 }
 
@@ -78,17 +81,6 @@ body.hidden {
 .nav {
     display: none;
 }
-
-.nav-link {
-    color: #ebe6e6;
-    font-size: 24px;
-}
-
-.nav-link:hover {
-    color: rgb(135, 116, 225, 1);
-}
-
-/* Header burger ----------------------------------- */
 
 /* Burger icon -------------------------------------- */
 .button-burger {
@@ -344,6 +336,14 @@ body.hidden {
 }
 
 @media (min-width: 768px) {
+    .header-content {
+        height: 80px;
+    }
+
+    .main {
+        padding-top: 100px;
+    }
+
     .nav {
         display: block;
 
@@ -369,7 +369,52 @@ body.hidden {
         display: flex;
         align-items: center;
         gap: 12px;
+    }
+}
 
-        font-size: 22px;
+@media (min-width: 1024px) {
+    .header-content {
+        height: 100px;
+    }
+
+    .main {
+        padding-top: 120px;
+    }
+    .nav-list {
+        gap: 30px;
+    }
+
+    .nav-burger-link,
+    .nav-link {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1800px) {
+    body {
+        font-size: 24px;
+    }
+
+    .nav-burger-link,
+    .nav-link {
+        font-size: 32px;
+    }
+}
+@media (min-width: 2560px) {
+    body {
+        font-size: 32px;
+    }
+
+    .header-content {
+        height: 120px;
+    }
+
+    .main {
+        padding-top: 140px;
+    }
+
+    .nav-burger-link,
+    .nav-link {
+        font-size: 40px;
     }
 }
