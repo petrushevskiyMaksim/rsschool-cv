@@ -35,6 +35,7 @@ body.hidden {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
 
     background-color: rgb(35, 35, 35);
 }
@@ -331,9 +332,36 @@ body.hidden {
 
 /* Main ------------------------------------------------------------------------------------- */
 .main {
-    padding-top: 80px;
+    padding-top: 110px;
 
     flex: 1 0 auto;
+}
+
+/* Hero Section ---------------------------------------------- */
+
+.image {
+    margin: 0 auto;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0px 0px 65px rgba(135, 116, 225, 0.2);
+
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0.5;
 }
 
 /* Footer ------------------------------------------------------------------------------------ */
@@ -347,7 +375,7 @@ body.hidden {
     }
 
     .main {
-        padding-top: 100px;
+        padding-top: 140px;
     }
 
     .nav {
@@ -384,7 +412,7 @@ body.hidden {
     }
 
     .main {
-        padding-top: 120px;
+        padding-top: 160px;
     }
     .nav-list {
         gap: 30px;
