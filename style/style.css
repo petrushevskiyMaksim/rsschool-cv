@@ -10,7 +10,7 @@ body {
     line-height: 1.5;
     font-style: normal;
     background-color: rgb(35, 35, 35);
-    color: #ebe6e6;
+    color: rgb(235, 230, 230);
 }
 
 body.hidden {
@@ -71,7 +71,7 @@ body.hidden {
 }
 
 .logo svg {
-    color: #e3e3e3;
+    color: rgb(227, 227, 227);
 
     transition: color 0.3s ease-in-out;
     -webkit-transition: color 0.3s ease-in-out;
@@ -112,7 +112,7 @@ body.hidden {
     width: 66%;
     height: 3px;
 
-    background-color: #e3e3e3;
+    background-color: rgb(227, 227, 227);
     transform: translateY(-50%);
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -134,7 +134,7 @@ body.hidden {
     height: 3px;
 
     border-radius: 20px;
-    background-color: #e3e3e3;
+    background-color: rgb(227, 227, 227);
 
     transition: all 0.3s ease-in-out;
 }
@@ -150,7 +150,7 @@ body.hidden {
 .button-burger:hover .burger-middle-icon,
 .button-burger:hover .burger-menu-icon::before,
 .button-burger:hover .burger-menu-icon::after {
-    background-color: #8774e1;
+    background-color: rgb(135, 116, 225);
 }
 
 .button-burger.open-menu .burger-middle-icon {
@@ -290,7 +290,7 @@ body.hidden {
 .nav-burger-link,
 .nav-link {
     position: relative;
-    color: #ebe6e6;
+    color: rgb(235, 230, 230);
     font-size: 24px;
 }
 
@@ -314,9 +314,8 @@ body.hidden {
     width: 0;
     height: 2px;
 
-    color: #8774e1;
-    background-color: #8774e1;
-    border-bottom: #8774e1;
+    background-color: rgb(135, 116, 225);
+    border-bottom: rgb(135, 116, 225);
 
     transition: width 0.5s ease;
     -webkit-transition: width 0.5s ease;
@@ -337,9 +336,9 @@ body.hidden {
     flex: 1 0 auto;
 }
 
-/* Hero Section ---------------------------------------------- */
+/* profile Section ---------------------------------------------- */
 
-.user-image {
+.profile-image {
     margin: 0 auto;
 
     width: 200px;
@@ -355,7 +354,7 @@ body.hidden {
     overflow: hidden;
 }
 
-.user-image img {
+.profile-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -364,16 +363,121 @@ body.hidden {
     opacity: 0.5;
 }
 
-.hero-title {
+.profile-title {
     margin-top: 30px;
     text-align: center;
     font-size: 36px;
 }
 
-.hero-title b {
+.profile-title b {
+    font-weight: 700;
     font-size: 42px;
-    color: #8774e1;
+    color: rgb(135, 116, 225);
     text-decoration: underline;
+}
+
+.profile-text {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 42px;
+}
+
+.profile-text i {
+    font-style: italic;
+}
+
+.profile-buttons {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+    font-size: 20px;
+
+    font-weight: 500;
+    color: rgb(235, 230, 230);
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.btn::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 0;
+    height: 100%;
+
+    background: #666e78;
+    background: linear-gradient(
+        0deg,
+        rgba(102, 110, 120, 1) 0%,
+        rgba(90, 92, 204, 1) 50%,
+        rgba(69, 61, 61, 1) 100%
+    );
+
+    transition: width 0.5s ease-in-out;
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -ms-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.btn:hover::after {
+    width: 100%;
+    left: 0;
+    z-index: 2;
+    background: #666e78;
+    background: linear-gradient(
+        0deg,
+        rgba(102, 110, 120, 1) 0%,
+        rgba(90, 92, 204, 1) 50%,
+        rgba(69, 61, 61, 1) 100%
+    );
+}
+
+.btn span {
+    position: relative;
+    z-index: 3;
+}
+
+.btn-email {
+    background-color: rgb(135, 116, 225);
+}
+
+.btn-email:hover {
+    outline: 1px solid #8774e1;
+}
+
+.btn-download {
+    border: 2px solid rgb(235, 230, 230);
+}
+
+.btn-download svg {
+    vertical-align: sub;
 }
 
 /* Footer ------------------------------------------------------------------------------------ */
@@ -446,6 +550,7 @@ body.hidden {
         font-size: 32px;
     }
 }
+
 @media (min-width: 2560px) {
     body {
         font-size: 32px;
