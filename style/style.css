@@ -6,6 +6,7 @@ html {
 #profile,
 #skills,
 #contacts,
+#projects,
 #education,
 #footer {
     scroll-margin-top: 90px; /* высота вашего фиксированного header + небольшой отступ */
@@ -42,6 +43,12 @@ h3 {
     font-size: 32px;
     font-weight: 500;
     color: #8774e1;
+}
+
+h4 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 /* Header --------------------------------------------------------------------------------- */
@@ -301,6 +308,9 @@ h3 {
 }
 .menu-burger.open .nav-burger-item:nth-child(5) {
     transition-delay: 1.6s;
+}
+.menu-burger.open .nav-burger-item:nth-child(6) {
+    transition-delay: 1.8s;
 }
 
 .nav-burger-link,
@@ -643,6 +653,78 @@ h3 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+}
+
+/* Projects section ----------------------------------------------------------*/
+
+.projects-title {
+    margin-bottom: 32px;
+}
+
+.projects-item {
+}
+
+.projects-image-link {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 12px;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-out, transform 0.1s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-out, transform 0.1s ease-in-out;
+    -moz-transition: opacity 0.5s ease-out, transform 0.1s ease-in-out;
+    -ms-transition: opacity 0.5s ease-out, transform 0.1s ease-in-out;
+    -o-transition: opacity 0.5s ease-out, transform 0.1s ease-in-out;
+}
+
+.projects-image-link:hover {
+    opacity: 1;
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+}
+
+/* .projects-image-link::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.5;
+    background-color: #666e78;
+} */
+
+.projects-image {
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.projects-item-content {
+}
+
+.project-item-stack {
+    color: #8774e1;
+}
+
+.project-item-desc {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.short {
+    display: inline-flex;
 }
 
 /* Footer ------------------------------------------------------------------------------------ */
