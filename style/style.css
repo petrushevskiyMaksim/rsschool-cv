@@ -413,7 +413,6 @@ h3 {
 /* Buttons ---------------------------------- */
 .profile-buttons {
     margin-top: 30px;
-    margin-bottom: 50px;
 
     display: flex;
     flex-direction: column;
@@ -507,6 +506,31 @@ h3 {
     vertical-align: sub;
 }
 
+/* Profile description -------------------------- */
+.profile-descripton-list {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-descripton-item:not(:first-child) {
+    margin-top: 16px;
+}
+
+.profile-descripton-text::after,
+.profile-descripton-text::before {
+    position: absolute;
+    font-weight: 500;
+    color: #8774e1;
+}
+
+.profile-descripton-text::after {
+    content: '/>';
+}
+.profile-descripton-text::before {
+    content: '<';
+    margin-left: -12px;
+}
+
 /* Contacts section ------------------------------------------------ */
 
 .contacts {
@@ -558,22 +582,21 @@ h3 {
 }
 
 .contacts-item-animate {
-    position: absolute;
-    opacity: 0.8;
+    display: none;
 }
 
-.contacts-item-github {
-    top: 20%;
+.contacts-item-telegram {
+    top: 10%;
     left: 20%;
     animation: github 8s ease infinite;
     -webkit-animation: github 8s ease infinite;
 }
 
-.contacts-item-telegram {
+.contacts-item-github {
     top: 100px;
     right: 10%;
-    animation: telegram 15s ease-in-out infinite;
-    -webkit-animation: telegram 15s ease-in-out infinite;
+    animation: telegram 10s ease-in-out infinite;
+    -webkit-animation: telegram 10s ease-in-out infinite;
 }
 
 .contacts-item-discord {
@@ -644,6 +667,20 @@ h3 {
     .contacts {
         display: none;
     }
+
+    .contacts-item-animate {
+        display: flex;
+        position: absolute;
+        opacity: 0.8;
+    }
+
+    .profile-descripton-list {
+        padding: 0 50px;
+    }
+
+    .profile-descripton-text {
+        font-size: 22px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -677,6 +714,10 @@ h3 {
     .nav-burger-link,
     .nav-link {
         font-size: 32px;
+    }
+
+    .profile-descripton-text {
+        font-size: 26px;
     }
 }
 

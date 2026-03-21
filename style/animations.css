@@ -8,11 +8,7 @@
     }
 
     50% {
-        transform: translate(50%, 40%);
-        -webkit-transform: translate(50%, 40%);
-        -moz-transform: translate(50%, 40%);
-        -ms-transform: translate(50%, 40%);
-        -o-transform: translate(50%, 40%);
+        transform: translate(20px, 40px);
     }
 }
 
@@ -26,11 +22,7 @@
     }
 
     50% {
-        transform: translatey(120px);
-        -webkit-transform: translatey(120px);
-        -moz-transform: translatey(120px);
-        -ms-transform: translatey(120px);
-        -o-transform: translatey(120px);
+        transform: translatey(50px);
     }
 
     50% {
