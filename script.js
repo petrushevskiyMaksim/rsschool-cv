@@ -11,6 +11,7 @@ burgerButton.addEventListener('click', function () {
 });
 
 burgerMenuList.addEventListener('click', function () {
+    burgerButton.classList.remove('open-menu');
     burgerMenu.classList.remove('open');
     body.classList.remove('hidden');
 });
