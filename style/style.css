@@ -796,7 +796,35 @@ h4 {
     color: #8774e1;
 }
 
-/* Section English ------------------------------------------------------------------------------------ */
+/* Section Languages ------------------------------------------------------------------------------------ */
+
+.languages {
+    margin-bottom: 50px;
+}
+
+.languages-title {
+    margin-bottom: 20px;
+}
+
+.languages-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.languages-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.languages-name {
+    font-weight: 700;
+}
+
+.languages-level {
+}
 
 /* Footer ------------------------------------------------------------------------------------ */
 .footer {
@@ -821,6 +849,19 @@ h4 {
 
     .education-title {
         margin-bottom: 40px;
+    }
+    .languages-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .languages-name {
+        font-size: 24px;
+        letter-spacing: 0.5px;
+    }
+
+    .languages-level {
+        font-size: 20px;
     }
 }
 
