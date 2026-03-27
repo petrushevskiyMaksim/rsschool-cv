@@ -51,6 +51,10 @@ h3 {
     font-weight: 500;
 }
 
+h4 {
+    font-size: 20px;
+}
+
 /* Header --------------------------------------------------------------------------------- */
 .header {
     position: fixed;
@@ -654,6 +658,10 @@ h3 {
 
 /* Projects section ----------------------------------------------------------*/
 
+.projects-inner {
+    margin-bottom: 50px;
+}
+
 .projects-title {
     margin-bottom: 32px;
 }
@@ -722,6 +730,73 @@ h3 {
 }
 
 /* Section Education ------------------------------------------------------------------------------------ */
+.education {
+    margin-bottom: 70px;
+}
+
+.education-title {
+    margin-bottom: 26px;
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.education-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.education-item::before,
+.education-item:last-child::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #8774e1;
+}
+
+.education-item::before {
+    top: -20px;
+}
+
+.education-item::after {
+    bottom: -20px;
+}
+
+.education-period {
+}
+
+.education-period,
+.education-course-name {
+    font-weight: 700;
+}
+
+.education-status {
+}
+
+.education-course-name {
+}
+
+.education-company {
+    color: rgb(235, 230, 230);
+    text-decoration: underline !important;
+    transition: color 0.2s ease-in;
+    -webkit-transition: color 0.2s ease-in;
+    -moz-transition: color 0.2s ease-in;
+    -ms-transition: color 0.2s ease-in;
+    -o-transition: color 0.2s ease-in;
+}
+
+.education-company:hover {
+    color: #8774e1;
+}
+
+/* Section English ------------------------------------------------------------------------------------ */
 
 /* Footer ------------------------------------------------------------------------------------ */
 .footer {
@@ -742,6 +817,10 @@ h3 {
     .contacts-item {
         width: 55px;
         height: 55px;
+    }
+
+    .education-title {
+        margin-bottom: 40px;
     }
 }
 
@@ -821,6 +900,12 @@ h3 {
     .skills-title {
         text-align: start;
     }
+
+    .education-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr 2fr;
+        gap: 20px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -895,6 +980,16 @@ h3 {
 
     .project-item-stack {
         font-weight: 500;
+    }
+}
+
+@media (min-width: 1200px) {
+    .education-list {
+        row-gap: 60px;
+    }
+
+    .education-item::after {
+        bottom: -40px;
     }
 }
 
