@@ -10,7 +10,7 @@ html {
 #education,
 #english,
 #footer {
-    scroll-margin-top: 90px; /* высота вашего фиксированного header + небольшой отступ */
+    scroll-margin-top: 90px;
 }
 
 body {
@@ -867,14 +867,6 @@ h4 {
 }
 
 /* Media queries ------------------------------------------------------------------------------ */
-
-@media (min-width: 375px) {
-    /* .footer-inner {
-        padding: 0 40px;
-        align-items: center;
-        justify-content: space-between;
-    } */
-}
 
 @media (min-width: 425px) {
     .profile-buttons {
