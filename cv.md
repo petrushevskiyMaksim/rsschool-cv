@@ -58,11 +58,10 @@ _I have developed a full-scale production-ready application [full-case](https://
 
 ## Code example
 
-<details>
-  <summary>Нажмите, чтобы развернуть</summary>
-
+<code>
+  
 ```
-  import {
+import {
     createEntityAdapter,
     createSlice,
     PayloadAction,
@@ -112,10 +111,8 @@ state.isLoading = true;
 
 export const { reducer: articleDetailsCommentsReducer } =
 articleDetailsCommentsSlice;
-
 ```
-
-</details>
+</code>
 
 ## Education 
 
