@@ -1,0 +1,61 @@
+@keyframes github {
+    0% {
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, 40px);
+    }
+}
+
+@keyframes telegram {
+    0% {
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translatey(50px);
+    }
+
+    50% {
+        transform: translatey(0, 0);
+        -webkit-transform: translatey(0, 0);
+        -moz-transform: translatey(0, 0);
+        -ms-transform: translatey(0, 0);
+        -o-transform: translatey(0, 0);
+    }
+}
+
+@keyframes discord {
+    0% {
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translatey(40px);
+        -webkit-transform: translatey(40px);
+        -moz-transform: translatey(40px);
+        -ms-transform: translatey(40px);
+        -o-transform: translatey(40px);
+    }
+
+    50% {
+        transform: translatey(0, 0);
+        -webkit-transform: translatey(0, 0);
+        -moz-transform: translatey(0, 0);
+        -ms-transform: translatey(0, 0);
+        -o-transform: translatey(0, 0);
+    }
+}
