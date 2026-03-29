@@ -58,8 +58,6 @@ _I have developed a full-scale production-ready application [full-case](https://
 
 ## Code example
 
-<code>
-  
 ```
 import {
     createEntityAdapter,
@@ -112,7 +110,6 @@ state.isLoading = true;
 export const { reducer: articleDetailsCommentsReducer } =
 articleDetailsCommentsSlice;
 ```
-</code>
 
 ## Education 
 
